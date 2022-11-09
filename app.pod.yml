@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: my-app
-    image: app-flask:latest
+    image: app-flask:1.0.0
     imagePullPolicy: IfNotPresent
     livenessProbe:
       httpGet:
