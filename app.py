@@ -1,11 +1,15 @@
 from flask import Flask
 import os
+import random 
+
+node_id=random.randint(1,1000)
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "ola mundo"
+    global node_id
+    return "node:{}".format
 
 @app.route("/health")
 def health():

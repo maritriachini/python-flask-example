@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app-1.0.0
+  name: my-app
   labels:
     app: my-app
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: my-app
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: app-flask
-        image: app-flask:1.0.0
+        image: gcr.io/calm-athlete-369113/app-flask:1.0.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
